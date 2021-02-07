@@ -1,0 +1,8 @@
+.README.md
+.package-lock.json
+.debug.log
+.capacitor.config.json
+..eslintcache
+/build
+/android
+/node_modules

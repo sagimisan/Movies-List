@@ -1,0 +1,58 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent , #00c6ff);
+  border-radius: 6px;
+
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent , #3f51b5);
+  border-radius: 6px;
+}
+body{
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-attachment: fixed; 
+}
+#filled-basic{
+  color: white;
+}
+#filled-basic-label{
+  color: white;
+}
+.movie-app>.row{
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+.cardDiv{
+  border-bottom:3px black solid
+}
+#cardDiv{
+  transition: 1.5s;
+  margin: 0 5px;
+}
+#cardDiv:hover{
+  width: 180px;
+}
+.label{
+  color: #3f51b5;
+  margin: 10px 0 5px 20px;
+  display: flex;
+  justify-content: left;
+  /* border-bottom: 3px rgb(107, 103, 103) solid; */
+}
