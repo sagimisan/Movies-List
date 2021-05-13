@@ -12,11 +12,9 @@ export default function MoviesCards(props) {
   const obj = {
     title: props.movie.title,
     releaseDate: props.movie.release_date,
-    // length: props.MovieLength,
     rating: props.movie.vote_average,
     poster: props.movie.poster_path,
     overview: props.movie.overview,
-    // trailer:props.MovieTrailer
   };
   function Details() {
     setDisplayImg("none")
@@ -61,7 +59,7 @@ export default function MoviesCards(props) {
         </Alert>
       </Snackbar>
       <Card id="cardDiv" className={classes.root}>
-            <CardMedia
+        <CardMedia
           onClick={Details}
           id="img"
           className={classes.img}
@@ -72,12 +70,12 @@ export default function MoviesCards(props) {
           title="movie img"
           style={{ display: displayImg }}
         />
-         <CardActions style={{ justifyContent: "center" }}>
+        <CardActions style={{ justifyContent: "center" }}>
           <Button onClick={addMovie} style={{ display: displayImg }} size="small" color="primary">
             add movie
               </Button>
-              <Button  onClick={Details} style={{ display: displayImg }}size="small" color="primary">
-              show details
+          <Button onClick={Details} style={{ display: displayImg }} size="small" color="primary">
+            show details
               </Button>
         </CardActions>
         <CardActionArea style={{ display: displayDetails }} >
@@ -91,19 +89,22 @@ export default function MoviesCards(props) {
             <Typography className={classes.text} gutterBottom variant="h6" component="h2">
               {props.movie.vote_average}
             </Typography>
+            <Typography className={classes.text} gutterBottom variant="h6" component="h2">
+              <a target="blank" href={`https://www.youtube.com/results?search_query=${props.movie.title}`}>trailer</a>
+            </Typography>
           </CardContent>
         </CardActionArea>
         <CardActions style={{ justifyContent: "center" }}>
           <Button onClick={addMovie} style={{ display: displayDetails }} size="small" color="primary">
             add movie
               </Button>
-              <Button onClick={LearnMore} style={{ display: displayDetails }}size="small" color="primary">
-              Learn More
+          <Button onClick={LearnMore} style={{ display: displayDetails }} size="small" color="primary">
+            Learn More
               </Button>
         </CardActions>
         <CardContent onClick={plotClick} style={{ display: `${DisplayPlot}` }}>
           <Typography className={classes.text} variant="p" color="textSecondary" component="p">
-             {props.movie.overview===""?<h3>no data</h3>:props.movie.overview}
+            {props.movie.overview === "" ? <h3>no data</h3> : props.movie.overview}
 
           </Typography>
         </CardContent>
@@ -118,7 +119,7 @@ export default function MoviesCards(props) {
 
 const useStyles = makeStyles({
   gridDiv: {},
-  Snackbar:{
+  Snackbar: {
     bottom: "50px"
   },
   root: {

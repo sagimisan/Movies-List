@@ -45,11 +45,11 @@ export default function CardsFromLS(props) {
           style={{ display: displayImg }}
         />
         <CardActions className={classes.link}>
-        <Button onClick={delet} style={{ display: displayImg }} size="small" color="primary">
-              Delete
+          <Button onClick={delet} style={{ display: displayImg }} size="small" color="primary">
+            Delete
               </Button>
-              <Button  onClick={Details} style={{ display: displayImg }}size="small" color="primary">
-              show details
+          <Button onClick={Details} style={{ display: displayImg }} size="small" color="primary">
+            show details
               </Button>
         </CardActions>
         <CardActionArea style={{ display: displayDetails }} >
@@ -58,12 +58,15 @@ export default function CardsFromLS(props) {
               {props.title}
             </Typography>
             <Typography className={classes.text} gutterBottom variant="h6" component="h2">
-            {props.releaseDate}
+              {props.releaseDate}
             </Typography>
             <Typography className={classes.text} gutterBottom variant="h6" component="h2">
             </Typography>
             <Typography className={classes.text} gutterBottom variant="h6" component="h2">
-            {props.rating}
+              {props.rating}
+            </Typography>
+            <Typography className={classes.text} gutterBottom variant="h6" component="h2">
+              <a target="blank" href={`https://www.youtube.com/results?search_query=${props.title}`}>trailer</a>
             </Typography>
           </CardContent>
           <CardActions>
@@ -77,12 +80,12 @@ export default function CardsFromLS(props) {
         </CardActionArea>
         <CardContent onClick={plotClick} style={{ display: `${displayPlot}` }}>
           <Typography className={classes.text} variant="p" color="textSecondary" component="p">
-             {props.overview===""?<h3>no data</h3>:props.overview}
+            {props.overview === "" ? <h3>no data</h3> : props.overview}
           </Typography>
         </CardContent>
       </Card>
     </Grid>
-  ); 
+  );
   function sendChildData() {
     props.childData(true);
   }

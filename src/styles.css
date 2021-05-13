@@ -56,3 +56,7 @@ body{
   justify-content: left;
   /* border-bottom: 3px rgb(107, 103, 103) solid; */
 }
+.MuiPaper-root{
+  background: linear-gradient(to bottom, #434343, #000000)!important;
+}
+
